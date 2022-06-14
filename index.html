@@ -1,50 +1,27 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
-  <head>
-    <meta charset="utf-8">
-    <!-- Ensures proper rendering and touch zooming -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Forces IE 8/9/10 to use its latest rendering engine -->
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Pixel Art Maker</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica">
+<html>
+<head>
+    <title>Pixel Art Maker!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
     <link rel="stylesheet" href="styles.css">
-  </head>
+</head>
+<body>
+    <h1>Pixel Art Maker</h1>
 
-  <body>
-    <div class="row">
-      <div class="column">
-        <div class="inputs">
-          <h4>choose grid size</h4>
-          <!-- class names all lower case and delimited with hyphens per Udacity Frontend Nanodegree Style Guide (CSS page) -->
-          <form class="size-picker">
-            height:
-            <input type="number" class="input-height" name="height" min="1" max="50" value="25">
-            <br><br>
-            width:
-            <input type="number" class="input-width" name="width" min="1" max="50" value="25">
-            <input type="submit" class="submit-button" value="submit">
-            <p><em>also clears grid</em></p>
-          </form>
-          <h4>select color</h4>
-          <input type="color" class="color-picker" value="#6aa5b8">
-          <input type="button" class="quick-fill" value="fill">
-          <h4>mode</h4>
-          <input type="button" class="erase-mode" value="erase">
-          <p><em>or double-click to erase</em></p>
-          <input type="button" class="draw-mode" value="draw">
-        </div>
-      </div>
-      <div class="column">
-        <h1>Pixel Art Maker</h1>
-        <table class="pixel-canvas"></table>
-        <br>
-      </div>
-    </div>
+    <h2>Choose Grid Size</h2>
+    <form id="sizePicker">
+        Grid Height:
+        <input type="number" id="inputHeight" name="height" min="10" value="10">
+        Grid Width:
+        <input type="number" id="inputWidth" name="width" min="10" value="10">
+        <input type="submit">
+    </form>
+
+    <h2>Pick A Color</h2>
+    <input type="color" id="colorPicker">
+
+    <h2>Design Canvas</h2>
+    <table id="pixelCanvas"></table>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="designs.js"></script>
-  </body>
-
+</body>
 </html>
-
